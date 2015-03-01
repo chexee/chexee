@@ -1,0 +1,12 @@
+# Site settings
+title: Chelsea Otakan – Product designer in SF. Loves purple.
+email: chexee@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Chelsea Otakan – Product designer in SF. Loves purple.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://chexee.me" # the base hostname & protocol for your site
+twitter_username: chexee
+github_username:  chexee
+
+# Build settings
+markdown: kramdown

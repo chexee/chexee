@@ -1,0 +1,62 @@
+.circle { border-radius: 50%; }
+
+.border { border-color: lighten(@grey1, 35%); }
+.border-grey { border-color: @grey2; }
+
+.rounded { border-radius: 50px; }
+.rounded-3  { border-radius: 4px; }
+
+.shadow {
+  border: 1px fadeout(black, 80%) solid;
+  box-shadow: 0 2px 11px 0 fadeout(black, 80%);
+
+}
+
+.dotted-line {
+  background-image: url(../images/dotted-line.svg);
+  background-repeat: repeat-y;
+  background-position: 28px 10px;
+}
+
+.extend-right { margin-right: -9999px; }
+
+.btn {
+  background-color: @purple1;
+  border: 1px darken(@purple1, 10%) solid;
+  border-radius: 4px;
+  color: white;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 10px 30px;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    background-color: darken(@purple1, 10%);
+    border: 1px darken(@purple1, 10%) solid;
+    color: white;
+  }
+}
+
+.lines {
+  &:before {
+    content: '';
+    border: 3px #eee solid;
+    border-radius: 10px;
+    float: left;
+    margin: 21px 0 -21px 0;
+    width: 100%;
+  }
+}
+
+.weak { opacity: 0.8; }
+
+.image-full {
+  margin: auto -2.5%;
+  width: 105%;
+}
+
+@media (max-width: 600px) {
+  .collapse-nav {
+    margin-left: 0 !important;
+  }
+}

@@ -1,3 +1,4 @@
+@import 'https://fonts.googleapis.com/css?family=Palanquin:400,600';
 .purple {
   color: #9f5dd6;
 }
@@ -44,12 +45,13 @@
 }
 body {
   color: #72678a;
-  font-family: 'Brandon Text W01', 'Brandon Text', 'Brandon Grotesque', 'Lucida Grande', sans-serif;
+  font-family: 'Palanquin', 'Helvetica', 'Lucida Grande', sans-serif;
   font-size: 20px;
-  line-height: 1.7em;
+  line-height: 1.6em;
+  letter-spacing: 0.2px;
 }
 body .lead {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 @media (max-width: 600px) {
   body {
@@ -66,7 +68,7 @@ h4 {
 }
 .lead {
   font-size: 1.8rem;
-  line-height: 1.5em;
+  line-height: 1.6em;
 }
 .small {
   font-size: 1rem;

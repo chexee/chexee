@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Palanquin:400,600';
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,500';
 .purple {
   color: #9f5dd6;
 }
@@ -45,16 +45,17 @@
 }
 body {
   color: #72678a;
-  font-family: 'Palanquin', 'Helvetica', 'Lucida Grande', sans-serif;
-  font-size: 20px;
+  font-family: 'Roboto', 'Helvetica', 'Lucida Grande', sans-serif;
+  font-size: 18px;
   line-height: 1.6em;
+  -webkit-font-smoothing: antialiased;
 }
 body .lead {
   font-size: 1.5rem;
 }
 @media (max-width: 600px) {
   body {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 h1,
@@ -70,7 +71,7 @@ h4 {
   line-height: 1.6em;
 }
 .small {
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.5rem;
 }
 .caps {
@@ -104,7 +105,9 @@ a:hover {
 }
 .label {
   background-color: white;
-  padding: 0px 8px 2px 8px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 0px 6px 2px 6px;
   position: relative;
   bottom: 2px;
 }

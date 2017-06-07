@@ -9,7 +9,7 @@ function unaffix(el) {
   el.style["z-index"] = "0"
 
   el.classList.add("mt1")
-  el.classList.remove("bg-white", "py2", isMobile ? "px3" : "px4", "m0", "shadow")
+  el.classList.remove("bg-white", "py2", "px3", "px4", "m0", "shadow")
 }
 
 function initStickyHeadings() {

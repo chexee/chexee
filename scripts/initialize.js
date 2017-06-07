@@ -1,8 +1,7 @@
-const MOBILE_BREAKPOINT = 640
-const isMobile = window.innerWidth < 640
+const [ MOBILE_BREAKPOINT, isMobile ] = [ 640, window.innerWidth < 640 ]
 
-document.addEventListener('DOMContentLoaded', () => emoji.init())
-document.addEventListener('scroll', initStickyHeadings)
+document.addEventListener("DOMContentLoaded", emoji.init)
+document.addEventListener("scroll", initStickyHeadings)
 
 function unaffix(el) {
   el.style.position = "relative"
@@ -10,13 +9,12 @@ function unaffix(el) {
   el.style["z-index"] = "0"
 
   el.classList.add("mt1")
-  el.classList.remove("bg-white", "py2",  isMobile ? "px3" : "px4", "m0", "shadow")
+  el.classList.remove("bg-white", "py2", isMobile ? "px3" : "px4", "m0", "shadow")
 }
 
 function initStickyHeadings() {
-  const nodes = document.getElementsByClassName("sticky")
+  const nodes = Array.prototype.slice.call(document.getElementsByClassName("sticky"))
   let currentNode = null
-  let nextNode = null
 
   const affix = (el) => {
     const isMobile = window.innerWidth < MOBILE_BREAKPOINT
@@ -34,19 +32,14 @@ function initStickyHeadings() {
     for (i = 0; i <= nodes.length - 1; i++) {
       const node = nodes[i]
       const nodeTop = node.getBoundingClientRect().top
-      const isLastNode = i === nodes.length - 1
-      const nextNode = isLastNode ? null : nodes[i + 1]
+      const nextNode = i === nodes.length - 1 ? null : nodes[i + 1]
       const nextNodeTop = nextNode ? nextNode.getBoundingClientRect().top : null
 
       if ( nodeTop <= 0 && nextNodeTop > 30) return node
     }
   }
 
-  const unaffixNodes = () => {
-    for (i = 0; i <= nodes.length - 1; i++) {
-      unaffix(nodes[i])
-    }
-  }
+  const unaffixNodes = () => nodes.map((node) => unaffix(node))
 
   unaffixNodes()
   currentNode = getCurrentNode()
